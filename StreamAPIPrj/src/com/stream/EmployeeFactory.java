@@ -15,9 +15,22 @@ import java.util.OptionalDouble;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Featuring Stream.collect functionality
+ * 
+ * @author yogesh.devatraj
+ *
+ */
 public class EmployeeFactory {
 	
 	public static void main(String[] args) {
+		/* Finding minimum/maximum employee age by country using usual collection framework */
+		avgMaxMinEmployeeAgeByCounter();
+		
+		/* Same thing implemented using Stream collect */
+		avgMaxMinEmployeeAgeByCounter2();
+		
+		/* Other feature from collect */
 		countEmployeeByCountry("US");
 		avaerageSalaryForCountry("US");
 		maxSalaryForCountry("IND");
@@ -25,8 +38,6 @@ public class EmployeeFactory {
 		groupPersonsByCountry();
 		seperatePersonByEmployeementType();
 		averageAgeByCountry();
-		avgMaxMinEmployeeAgeByCounter();
-		avgMaxMinEmployeeAgeByCounter2();
 		maxSalaryByCountry();
 		maxSalaryByEmployeeTypeByCountry();
 	}
